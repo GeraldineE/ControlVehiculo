@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agenciautos</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Agenciautos
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="ContVehic.html">Control de vehiculo</a>
+                </li>
+                <li>
+                    <a href="ContKil.html">Control de kilometraje</a>
+                </li>
+                <li>
+                    <a href="Mant.html">Mantenimiento</a>
+                </li>
+                <li>
+                    <a href="Fina.html">Finanzas</a>
+                </li>
+                <li>
+                    <a href="Comb.html">Combustible</a>
+                </li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>Control de vehiculo</h1>
+                <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle" style="float:center">Ver menu</a>
+            <div>
+            <table style="width:100%">
+                <th>Fecha de compra
+                <input type="date" id="fcompra" placeholder="fecha de compra" class="form-control" style="width:200px;height:40px"></th>
+                <th>Precio de compra
+                <input type="text" id="pcompra" placeholder="precio de compra" class="form-control" style="width:200px;height:40px"></th>
+                <th>Porcentaje de depreciacion
+                <input type="text" id="deprec" placeholder="% de depreciacion" class="form-control" style="width:200px;height:40px"></th>
+            </table>
+            <h1></h1>
+            <table style="width:100%">
+                <th>Vencimiento del seguro
+                <input type="date" id="seguro" placeholder="fecha del seguro" class="form-control" style="width:200px;height:40px"></th>
+                <th>Vencimiento del SOAT
+                <input type="date" id="soat" placeholder="fecha del SOAT" class="form-control" style="width:200px;height:40px"></th>
+                <th>Revision tecnicomecanica
+                <input type="date" id="tecno" placeholder="fecha del SOAT" class="form-control" style="width:200px;height:40px"></th>
+            </table>
+            <h1></h1>
+            <table style="width:100%">
+                <th>Ultimo cambio de aceite
+                <input type="date" id="aceite" placeholder="fecha del seguro" class="form-control" style="width:200px;height:40px"></th>
+                <th>Ultimo cambio de pastas
+                <input type="date" id="pastas" placeholder="fecha del SOAT" class="form-control" style="width:200px;height:40px"></th>
+                <th>Ultimo cambio de llantas
+                <input type="date" id="llantas" placeholder="fecha del SOAT" class="form-control" style="width:200px;height:40px"></th>
+            </table>
+            <button class="btn btn-info" id="boton" onclick="guardarv()">Guardar</button>
+            </div>
+           
+            <h1></h1>
+            <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Fecha de compra</th>
+                        <th scope="col">Precio de compra</th>
+                        <th scope="col">Porcentaje de depreciacion</th>
+                        <th scope="col">Fecha del seguro</th>
+                        <th scope="col">Fecha del SOAT</th>
+                        <th scope="col">Fecha Tecnicomecanica</th>
+                        <th scope="col">Ultimo cambio de aceite</th>
+                        <th scope="col">Ultimo cambio de pastas</th>
+                        <th scope="col">Ultimo cambio de llantas</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabla">
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+        
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/appCV.js"></script>
+   
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+
+</body>
+    
+</html>
